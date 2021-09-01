@@ -27,13 +27,19 @@ namespace POO_Ejercicio_3
         {
             double a=0, b=0, c=0, x1=0, x2=0;
 
-            a = Convert.ToDouble(txt_a.Text);
-            b = Convert.ToDouble(txt_b.Text);
-            c = Convert.ToDouble(txt_c.Text);
+            
 
             try
             {
+                a = Convert.ToDouble(txt_a.Text);
+                b = Convert.ToDouble(txt_b.Text);
+                c = Convert.ToDouble(txt_c.Text);
 
+                x1 = (-b + Math.Sqrt((b * b) - (4 * c * a))) / (2 * a);
+                x2 = (-b - Math.Sqrt((b * b) - (4 * c * a))) / (2 * a);
+
+                txt_x1.Text = Convert.ToString(x1);
+                txt_x2.Text = Convert.ToString(x2);
             }
             catch (FormatException)
             {
